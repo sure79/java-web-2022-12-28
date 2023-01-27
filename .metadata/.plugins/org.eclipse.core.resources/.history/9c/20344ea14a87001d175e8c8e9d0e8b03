@@ -1,0 +1,25 @@
+package chapter01;
+
+public class Example03 {
+
+	public static void main(String[] args) {
+		// 산술 연산자
+		//더하기
+		System.out.println(8 + 3);
+		//빼기
+		System.out.println(8 - 3);
+		//곱하기
+		System.out.println(8 * 3);
+		//나누기
+		System.out.println(8 / 3);
+
+
+
+		// 대입 연산자
+		
+		// 비교 연산자
+		
+		// 논리 연산자
+	}
+
+}

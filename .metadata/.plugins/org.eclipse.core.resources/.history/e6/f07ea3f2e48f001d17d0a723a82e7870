@@ -1,0 +1,34 @@
+package chapter03;
+
+class Animal {
+	String ears;
+	String eyes;
+	String legs;
+}
+
+class Bird extends Animal {
+	private String wings;
+}
+
+class Mokey extends Animal{
+	private String arms;
+}
+
+public class Polymorphism {
+	
+	public static void main(String[] args) {
+		Animal bird = new Bird();
+		bird.ears = "ears";
+		bird.eyes = "eyes";
+		bird.legs = "legs";
+		bird.wings = "wings";
+		
+		Bird bird2 = (Bird) bird;
+	}
+	
+	
+	
+	
+	
+
+}
