@@ -1,2 +1,3 @@
-//? 각종 함수들 관리
-export const tmp="";
+//? 각종 일반 함수 관리
+export const getPageCount = (list: any[], count: number) => 
+     Math.floor((list.length-1)/count)+1;

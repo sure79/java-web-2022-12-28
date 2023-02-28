@@ -20,7 +20,5 @@ public class DeleteBoardDTO {
 	public String toString() {
 		return "DeleteBoardDTO [id=" + id + "]";
 	}
-	
-	
 
 }

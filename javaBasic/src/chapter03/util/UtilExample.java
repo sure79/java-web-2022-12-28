@@ -2,8 +2,7 @@ package chapter03.util;
 
 public class UtilExample {
 	
-	static final int NUMBER = 10;
-	
+	static int number = 10;
 	
 	int add(int a, int b) {
 		return a + b;
@@ -13,5 +12,5 @@ public class UtilExample {
 		for (int i = 0; i < b; i++) a *= a;
 		return a;
 	}
-
+	
 }

@@ -5,12 +5,15 @@ import java.util.Date;
 // 데이터베이스 테이블로 부터
 // 추출해 온 Class는 **Entity라 명명 함
 public class BoardEntity {
-	//Entity class는 맴버변수가 테이블의 필드명과 완전 일치해야 함.
+	// Entity class는
+	// 멤버변수가 테이블의 필드명과
+	// 일치해야함
 	private int boardNumber;
 	private String boardTitle;
 	private String boardContent;
 	private Date boardDate;
 	private int boardWriter;
+	
 	public int getBoardNumber() {
 		return boardNumber;
 	}
@@ -41,22 +44,26 @@ public class BoardEntity {
 	public void setBoardWriter(int boardWriter) {
 		this.boardWriter = boardWriter;
 	}
+	
 	public BoardEntity(int boardNumber, String boardTitle, String boardContent, Date boardDate, int boardWriter) {
-		
 		this.boardNumber = boardNumber;
 		this.boardTitle = boardTitle;
 		this.boardContent = boardContent;
 		this.boardDate = boardDate;
 		this.boardWriter = boardWriter;
 	}
+	
 	@Override
 	public String toString() {
 		return "BoardEntity [boardNumber=" + boardNumber + ", boardTitle=" + boardTitle + ", boardContent="
 				+ boardContent + ", boardDate=" + boardDate + ", boardWriter=" + boardWriter + "]";
 	}
 	
-	
-	
-	
-	
 }
+
+
+
+
+
+
+

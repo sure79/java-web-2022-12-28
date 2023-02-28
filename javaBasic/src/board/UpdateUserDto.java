@@ -1,16 +1,15 @@
 package board;
 
-//DTO : Data Transfer Object
-//데이터 전송 객체
-//서로 다른 레이어 간에 데이터를 송수신 할때 사용되는 객체
+// DTO: Data Transfer Object
+// 데이터 전송 객체
+// 서로 다른 레이어 간에 데이터를 송수신 할때 사용되는 객체
 public class UpdateUserDto {
 	private int id;
 	private String password;
 	private String name;
 	private String telNumber;
 	
-	
-	//constructor 인스턴스 초기화작업
+	// constructor
 	public UpdateUserDto(int id, String password, String name, String telNumber) {
 		this.id = id;
 		this.password = password;
@@ -18,8 +17,7 @@ public class UpdateUserDto {
 		this.telNumber = telNumber;
 	}
 	
-	//getter, setter
-	
+	// getter, setter
 	public int getId() {
 		return this.id;
 	}
@@ -51,9 +49,4 @@ public class UpdateUserDto {
 	public void setTelNumber(String telNumber) {
 		this.telNumber = telNumber;
 	}
-	
-	
-	
-	
-
 }

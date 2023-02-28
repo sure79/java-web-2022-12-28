@@ -7,7 +7,7 @@ import database.DAO.UserDAO;
 import database.Entity.BoardEntity;
 import database.Entity.UserEntity;
 import dto.DeleteBoardDTO;
-import dto.InserBoardDTO;
+import dto.InsertBoardDTO;
 import dto.UpdateBoardDTO;
 
 // 실제 비즈니스 로직을 수행하는 Layer
@@ -21,13 +21,12 @@ public class BoardService {
 		this.userDao = new UserDAO();
 	}
 
-	public int postBoard(InserBoardDTO insertBoardDto) {
-		
+	public int postBoard(InsertBoardDTO insertBoardDto) {
 		UserEntity userEntity = userDao.findById(insertBoardDto.getBoardWriter());
 		if (userEntity == null) return 0;
+		
 		return boardDao.insert(insertBoardDto);
 	}
-	
 	
 	public List<BoardEntity> getBoardList() {
 		return boardDao.find();
@@ -48,3 +47,10 @@ public class BoardService {
 	}
 	
 }
+
+
+
+
+
+
+

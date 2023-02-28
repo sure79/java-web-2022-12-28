@@ -1,7 +1,5 @@
 package board;
 
-
-//아래코드를 자바빈이라고 한다.
 public class User {
 	// 아이디
 	private int id;
@@ -12,15 +10,15 @@ public class User {
 	// 전화번호
 	private String telNumber;
 	
-	// 생성자 맴버변수 초기화
-	public User(int id, String password, String name, String temNumber) {
+	// 생성자
+	public User(int id, String password, String name, String telNumber) {
 		this.id = id;
 		this.password = password;
 		this.name = name;
 		this.telNumber = telNumber;
 	}
 	
-	//getter, setter 메서드
+	// getter, setter 메서드
 	public int getId() {
 		return this.id;
 	}
@@ -58,7 +56,10 @@ public class User {
 		return "User [id=" + id + ", password=" + password + ", name=" + name + ", telNumber=" + telNumber + "]";
 	}
 	
-	
-	
-	
 }
+
+
+
+
+
+

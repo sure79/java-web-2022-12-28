@@ -4,11 +4,10 @@ import database.DAO.UserDAO;
 
 public class UserService {
 	
-	private UserDAO UserDao;
+	private UserDAO userDao;
 	
 	public UserService () {
-		
-		this.UserDao = new UserDAO();
+		this.userDao = new UserDAO();
 	}
 
 }

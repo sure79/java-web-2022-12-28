@@ -1,2 +1,4 @@
-//? 컴스텀 훅 함수 관리
-export const tmp="";
+//? 커스텀 훅 관리
+import usePagingHook from "./paging.hook";
+
+export {usePagingHook};

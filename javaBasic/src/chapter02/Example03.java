@@ -1,28 +1,27 @@
 package chapter02;
 
-class Mymath {
-	static double getEquilateralTriangleArea (double side) {
-		//매개변수검증
-		if (side <= 0) {
-			return 0;
-		}
-		double result = (Math.sqrt(3) / 4) * Math.pow(side,  2);
+class MyMath {
+	static double getEquilateralTriangleArea(double side) {
+		// 매개변수 검증
+		if (side <= 0) return 0;
+		
+		double result = (Math.sqrt(3) / 4) * Math.pow(side, 2);
 		return result;
 	}
-	//정삼각형의 높이를 구하는 메서드
-	static double getEquilateralTriangleHeight ( double side) {
-		//매개변수 검증
-		if (side <=0) {
-			return 0;
-		}
-		double getEquilateralTriangleHeight = (Math.sqrt(3) / 2) * side;
-		return getEquilateralTriangleHeight;
+	
+	// 정삼각형의 높이를 구하는 메서드
+	static double getEquilateralTriangleHeigth(double side) {
+		// 매개변수 검증
+		if (side <= 0) return 0;
+		
+		double equilateralTriangleHeigth = (Math.sqrt(3) / 2) * side;
+		return equilateralTriangleHeigth;
 	}
 	
-	//1증가
+	// 1증가
 	static int increase(int number) {
 		number++;
-		System.out.println("In of methond");
+		System.out.println("In of Method");
 		System.out.println(number);
 		return number;
 	}
@@ -31,37 +30,41 @@ class Mymath {
 		triangle.base++;
 		triangle.height++;
 		triangle.diagonal++;
-		
 	}
-	
 }
 
 public class Example03 {
 
 	public static void main(String[] args) {
 		double side = 10.0;
-		double equilateralTritangleArea = Mymath.getEquilateralTriangleArea(side);
-		System.out.println(equilateralTritangleArea);
 		
+		double equilateralTriangleArea = MyMath.getEquilateralTriangleArea(side);
+		System.out.println(equilateralTriangleArea);
 		
-		double equilateralTriangleHeight = Mymath.getEquilateralTriangleHeight(-10);
-		System.out.println(equilateralTriangleHeight);
-		
+		double equilateralTriangleHeigth = MyMath.getEquilateralTriangleHeigth(-10);
+		System.out.println(equilateralTriangleHeigth);
 		
 		int number = 10;
-		int afternumber = Mymath.increase(number);
-		System.out.println("Out of methond");
+		int afterNumber = MyMath.increase(number);
+		System.out.println("Out of Method");
 		System.out.println(number);
-		number = Mymath.increase(number);
+		number = MyMath.increase(number);
 		
 		Triangle triangle = new Triangle();
 		triangle.createAndPrint();
+		System.out.println(triangle);
 		
-		Mymath.increaseTriangle(triangle);
+		MyMath.increaseTriangle(triangle);
 		System.out.println(triangle.base);
-		
-
+		System.out.println(triangle);
 	}
 
 }
- 
+
+
+
+
+
+
+
+

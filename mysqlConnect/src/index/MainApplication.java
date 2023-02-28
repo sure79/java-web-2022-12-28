@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import database.Entity.BoardEntity;
 import dto.DeleteBoardDTO;
-import dto.InserBoardDTO;
+import dto.InsertBoardDTO;
 import dto.UpdateBoardDTO;
 import service.BoardService;
 
@@ -34,8 +34,8 @@ public class MainApplication {
 			
 			///////////////////////////////////////////////////////
 			// Service Layer 전송할 DTO 생성
-			InserBoardDTO insertBoardDto = 
-					new InserBoardDTO(boardTitle, boardContent, boardWriter);
+			InsertBoardDTO insertBoardDto = 
+					new InsertBoardDTO(boardTitle, boardContent, boardWriter);
 			
 			///////////////////////////////////////////////////////
 			// 실제 비즈니스 로직을 실행하기 위해 Service의 메서드를 호출
@@ -120,4 +120,8 @@ public class MainApplication {
 	}
 
 }
+
+
+
+
 
