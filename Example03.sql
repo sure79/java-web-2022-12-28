@@ -1,0 +1,9 @@
+CREATE DATABASE EXAMPLE_DB;
+USE EXAMPLE_DB;
+
+CREATE TABLE Example (
+	prime INT PRIMARY KEY AUTO_INCREMENT,
+    comment TEXT,
+    number INT
+    
+);
