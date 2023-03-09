@@ -11,11 +11,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class PostDepartmentRequestDto {
-
+    
     @NotBlank
     @Length(min = 0, max = 5)
     private String departmentCode;
-
+    
     @NotBlank
     @Length(min = 0, max = 50)
     private String name;
@@ -24,7 +24,7 @@ public class PostDepartmentRequestDto {
     private int cheif;
 
     @NotBlank
+    @Length(min = 0, max = 15)
     private String telNumber;
 
-    
 }

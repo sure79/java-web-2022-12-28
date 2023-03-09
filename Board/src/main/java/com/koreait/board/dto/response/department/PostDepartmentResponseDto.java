@@ -16,12 +16,10 @@ public class PostDepartmentResponseDto {
     private int cheif;
     private String telNumber;
 
-    public PostDepartmentResponseDto(DepartmentEntity departmentEntity){
+    public PostDepartmentResponseDto(DepartmentEntity departmentEntity) {
         this.departmentCode = departmentEntity.getDepartmentCode();
         this.name = departmentEntity.getName();
         this.cheif = departmentEntity.getCheif();
         this.telNumber = departmentEntity.getTelNumber();
-
     }
-    
 }
