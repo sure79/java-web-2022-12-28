@@ -22,24 +22,19 @@ public class FileController {
 
     private static final String UPLOAD = "/upload";
     private static final String GET_IMAGE_FILE = "/image/{imageName}";
-
-    //? File upload
-    // POST http://localhost:4040/file/upload
+    
+    //# File upload 
     @PostMapping(UPLOAD)
     public String upload(@RequestParam("file") MultipartFile file) {
-        String  fileUrl = fileService.upload(file);
+        String fileUrl = fileService.upload(file);
         return fileUrl;
-
     }
 
-    //? IMAGE 출력
-
+    //# IMAGE 출력 
     @GetMapping(value=GET_IMAGE_FILE, produces={MediaType.IMAGE_PNG_VALUE, MediaType.IMAGE_JPEG_VALUE})
     public Resource getImageFile(@PathVariable("imageName") String imageName) {
         Resource resource = fileService.getImageFile(imageName);
         return resource;
-
     }
 
-    
 }

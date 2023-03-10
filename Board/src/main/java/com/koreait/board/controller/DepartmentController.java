@@ -37,18 +37,18 @@ public class DepartmentController {
         ResponseDto<PostDepartmentResponseDto> response = departmentService.postDepartment(requestBody);
         return response;
     }
-    //? GET http://localhost:4040/apis/department/all
+
     @GetMapping(GET_ALL_DEPARTMENT_LIST)
+    //? GET http://localhost:4040/apis/department/all
     public ResponseDto<List<GetAllDepartmentListResponseDto>> getAllDepartmentList() {
         ResponseDto<List<GetAllDepartmentListResponseDto>> response = departmentService.getAllDepartmentList();
         return response;
     }
 
-    //? DELETE http://localhost:4040/apis/department/{departmentCode}
     @DeleteMapping(DELETE_DEPARTMENT)
-    public ResponseDto<List<DeleteDepartmentResponseDto>> deleteDepartment(@PathVariable("departmentCode") String departmentCode){
+    //? DELETE http://localhost:4040/apis/department/{departmentCode}
+    public ResponseDto<List<DeleteDepartmentResponseDto>> deleteDepartment(@PathVariable("departmentCode") String departmentCode) {
         ResponseDto<List<DeleteDepartmentResponseDto>> response = departmentService.deleteDepartment(departmentCode);
         return response;
-
     }
 }

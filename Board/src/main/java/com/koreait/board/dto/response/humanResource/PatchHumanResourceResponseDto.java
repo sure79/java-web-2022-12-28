@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class PatchHumanResourceResponseDto {
     //? 사번
     private int employeeNumber;
@@ -43,7 +42,6 @@ public class PatchHumanResourceResponseDto {
     private String note;
 
     public PatchHumanResourceResponseDto(EmployeeEntity employeeEntity) {
-
         this.employeeNumber = employeeEntity.getEmployeeNumber();
         this.position = employeeEntity.getPosition();
         this.name = employeeEntity.getName();
@@ -59,10 +57,5 @@ public class PatchHumanResourceResponseDto {
         this.department = employeeEntity.getDepartment();
         this.annualIncome = employeeEntity.getAnnualIncome();
         this.note = employeeEntity.getNote();
-    
-
-
     }
-
-    
 }

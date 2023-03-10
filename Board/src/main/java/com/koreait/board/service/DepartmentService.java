@@ -26,13 +26,10 @@ public class DepartmentService {
         
         PostDepartmentResponseDto data = null;
 
+        String departmentCode = dto.getDepartmentCode();
         int cheifEmployeeNumber = dto.getCheif();
 
-        String departmentCode = dto.getDepartmentCode();
-        
-
         try {
-
 
             boolean hasDepartment = departmentRepository.existsById(departmentCode);
             if (hasDepartment) return ResponseDto.setFail(ResponseMessage.EXIST_DEPARTMENT_CODE);
@@ -73,6 +70,7 @@ public class DepartmentService {
     }
 
     public ResponseDto<List<DeleteDepartmentResponseDto>> deleteDepartment(String departmentCode) {
+
         List<DeleteDepartmentResponseDto> data = null;
 
         try {
@@ -84,16 +82,17 @@ public class DepartmentService {
             if (hasReferenceEmployee) return ResponseDto.setFail(ResponseMessage.REFERRING_EXIST);
 
             departmentRepository.deleteById(departmentCode);
-
+            
             List<DepartmentEntity> departmentEntities = departmentRepository.findAll();
             data = DeleteDepartmentResponseDto.copyList(departmentEntities);
 
-        }catch (Exception exception){
+        } catch (Exception exception) {
             exception.printStackTrace();
             return ResponseDto.setFail(ResponseMessage.DATABASE_ERROR);
         }
-        
+
         return ResponseDto.setSuccess(ResponseMessage.SUCCESS, data);
+
     }
 
 }

@@ -12,7 +12,7 @@ import com.koreait.board.provider.TokenProvider;
 @RestController
 @RequestMapping(ApiMappingPattern.AUTH)
 public class AuthController {
-
+    
     @Autowired private TokenProvider tokenProvider;
 
     private static final String GET_TOKEN = "/getToken";
@@ -26,7 +26,6 @@ public class AuthController {
     @PostMapping(VALIDATE_TOKEN)
     public String validateToken(@RequestBody String requestBody) {
         return tokenProvider.validate(requestBody);
-
     }
-    
+
 }
