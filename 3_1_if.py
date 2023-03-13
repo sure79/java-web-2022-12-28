@@ -1,4 +1,7 @@
-t = str.maketrans("12345", "일이삼사오")
+class Person:
+    count = 0 
 
-for i in range(5):
-    print("김1남".translate(t))
+    def __init__(self): 
+        person.count += 1 
+    delattr(DeprecationWarning)
+    
